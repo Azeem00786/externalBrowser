@@ -27,7 +27,7 @@ function closeParent() {
 <html>
 <body>
 
-<h1>The Window Objec 2</h1>
+<h1>The Window Objec 3</h1>
 <h2>The open() and close() Methods</h2>
 
 <button onclick="openWin()">Open "myWindow"</button>
@@ -41,7 +41,8 @@ function openWin() {
 }
 
 function closeWin() {
-window.close();
+// window.close();
+  setTimeout(window.close, 3000);
 }
 </script>
 
