@@ -29,8 +29,25 @@ function closeParent() {
 
 <h1>The Window Objec 3</h1>
 <h2>The open() and close() Methods</h2>
+  <p>If the page stops. Please press the button below to continue.</p>
+<input id="button" name="button" type="submit" value="Close">
 
-<button onclick="openWin()">Open "myWindow"</button>
+<script>
+  var ua = window.navigator.userAgent;
+
+  if (ua.indexOf('iPhone ') > 0) {  
+    document.querySelector('#button').addEventListener('click', function (event) {
+      event.preventDefault();
+      window.close();
+    }, false);
+
+    document.querySelector('#button').click();
+  } else {
+    window.close();
+  }
+</script>
+
+<!-- <button onclick="openWin()">Open "myWindow"</button>
 <button onclick="closeWin()">Close "myWindow"</button>
 
 <script>
@@ -45,7 +62,7 @@ window.close();
   // setTimeout(window.close, 3000);
   // window.self.close();
 }
-</script>
+</script> -->
 
 </body>
 </html>
