@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>The Window Object</h1>
+<h2>The open() and close() Methods</h2>
+
+<button onclick="closeParent()">close parent</button>
+<button onclick="closeWin()">Close</button>
+
+<script>
+
+
+function closeWin() {
+  window.close();
+}
+function closeParent() {
+  window.parent.close();
+}
+</script>
+
+</body>
+</html>
