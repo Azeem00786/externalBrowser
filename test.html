@@ -12,8 +12,8 @@
 
 
 function closeWin() {
-  // window.close();
-  setTimeout(window.close, 3000);
+  window.self.close();
+  // setTimeout(window.close, 3000);
 }
 function closeParent() {
   window.parent.close();
