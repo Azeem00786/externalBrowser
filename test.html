@@ -50,9 +50,7 @@ function closeWin() {
 }
 
 function waitFiveSec() {
-  setTimeout(function() {
-    window.close();
-  }, 5000);
+  window.history.back();
 }
 
 function closeSelf() {
