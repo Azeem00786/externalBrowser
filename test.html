@@ -36,6 +36,7 @@ function closeParent() {
 
 <button onclick="closeWin()">Close "myWindow"</button>
   <button onclick="closeInAppBrowser()">Close In-App Browser</button>
+  <button onclick="callPostMessage()">Call postMessage</button>
 <!--   <button onclick="closeSelf()">close self</button>
   <button onclick="closeJs()">close js</button>
    <button onclick="closeDOC()">close DOC</button>
@@ -48,6 +49,16 @@ let myWindow;
 // function openWin() {
 //   myWindow = window.open("", "", "width=200,height=100");
 // }
+function callPostMessage() {
+    if (window.ReactNativeWebView) {
+      let data = {
+        postMessageType: "listenEvenFromExternalBrowser"
+      };
+      window.ReactNativeWebView.postMessage(JSON.stringify(data));
+    } else {
+      console.error("window.ReactNativeWebView is not available yet.");
+    }
+  
 function closeInAppBrowser() {
   window.ReactNativeWebView.postMessage('closeBrowser');
 }
