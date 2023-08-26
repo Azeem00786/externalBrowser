@@ -38,7 +38,6 @@ function closeParent() {
    <button onclick="closeDOC()">close DOC</button>
   <button onclick="waitFiveSec()">close waitFiveSec</button>
 
-
 <script>
 let myWindow;
 
@@ -47,33 +46,30 @@ function openWin() {
 }
 
 function closeWin() {
-window.close();
-  // setTimeout(window.close, 3000);
-  // window.self.close();
+  window.close();
 }
-  function waitFiveSec(){
-    setTimeout(function, 5000) /*(here you need to implement delay code)*/
-    window.close();
-  }
-  function closeSelf() {
-// window.close();
-  // setTimeout(window.close, 3000);
-   window.self.close();
-}
-  function closeJs() {
-   Javascript:window.close()
-  // setTimeout(window.close, 3000);
-  // window.self.close();
-    
 
+function waitFiveSec() {
+  setTimeout(function() {
+    window.close();
+  }, 5000);
 }
-  function closeDOC() {
-// window.close();
-  // setTimeout(window.close, 3000);
-  // window.self.close();
-      javascript:document.onclick=function(){window.close()}
+
+function closeSelf() {
+  window.self.close();
+}
+
+function closeJs() {
+  Javascript:window.close();
+}
+
+function closeDOC() {
+  javascript:document.onclick = function() {
+    window.close();
+  };
 }
 </script>
+
 
 </body>
 </html>
