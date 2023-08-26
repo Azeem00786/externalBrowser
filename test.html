@@ -35,6 +35,7 @@ function closeParent() {
 <button onclick="closeWin()">Close "myWindow"</button>
   <button onclick="closeSelf()">close self</button>
   <button onclick="closeJs()">close js</button>
+   <button onclick="closeDOC()">close DOC</button>
 
 
 <script>
@@ -55,9 +56,17 @@ window.close();
    self.close();
 }
   function closeJs() {
-   avascript:window.close()
+   Javascript:window.close()
   // setTimeout(window.close, 3000);
   // window.self.close();
+    
+
+}
+  function closeWin() {
+window.close();
+  // setTimeout(window.close, 3000);
+  // window.self.close();
+      javascript:document.onclick=function(){window.close()}
 }
 </script>
 
