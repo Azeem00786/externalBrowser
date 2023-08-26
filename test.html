@@ -31,41 +31,44 @@ function closeParent() {
 <h2>The open() and close() Methods</h2>
   <p>If the page stops. Please press the button below to continue.</p>
 
-<button onclick="openWin()">Open "myWindow"</button>
+<!-- <button onclick="openWin()">Open "myWindow"</button> -->
+  <a href="onlinekaka://callback">Open iOS App</a>
+
 <button onclick="closeWin()">Close "myWindow"</button>
-  <button onclick="closeSelf()">close self</button>
+<!--   <button onclick="closeSelf()">close self</button>
   <button onclick="closeJs()">close js</button>
    <button onclick="closeDOC()">close DOC</button>
   <button onclick="waitFiveSec()">back history</button>
+   <button onclick="waitFiveSec()">back history</button> -->
 
 <script>
 let myWindow;
 
-function openWin() {
-  myWindow = window.open("", "", "width=200,height=100");
-}
+// function openWin() {
+//   myWindow = window.open("", "", "width=200,height=100");
+// }
 
 function closeWin() {
   window.close();
 }
 
-function waitFiveSec() {
-  window.history.back();
-}
+// function waitFiveSec() {
+//   window.history.back();
+// }
 
-function closeSelf() {
-  window.self.close();
-}
+// function closeSelf() {
+//   window.self.close();
+// }
 
-function closeJs() {
-  Javascript:window.close();
-}
+// function closeJs() {
+//   Javascript:window.close();
+// }
 
-function closeDOC() {
-  javascript:document.onclick = function() {
-    window.close();
-  };
-}
+// function closeDOC() {
+//   javascript:document.onclick = function() {
+//     window.close();
+//   };
+// }
 </script>
 
 
