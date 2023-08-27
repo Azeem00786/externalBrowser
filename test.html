@@ -50,14 +50,12 @@ let myWindow;
 //   myWindow = window.open("", "", "width=200,height=100");
 // }
 function callPostMessage() {
-    if (window.ReactNativeWebView) {
-      let data = {
+  console.log("callPostMessage")
+  let data = {
         postMessageType: "listenEvenFromExternalBrowser"
       };
       window.ReactNativeWebView.postMessage(JSON.stringify(data));
-    } else {
-      console.error("window.ReactNativeWebView is not available yet.");
-    }
+}
   
 function closeInAppBrowser() {
   window.ReactNativeWebView.postMessage('closeBrowser');
