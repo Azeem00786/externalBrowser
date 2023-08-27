@@ -38,8 +38,8 @@ function closeParent() {
   <button onclick="closeInAppBrowser()">Close In-App Browser</button>
   <button onclick="callPostMessage()">Call postMessage</button>
 <!--   <button onclick="closeSelf()">close self</button>
-  <button onclick="closeJs()">close js</button>
-   <button onclick="closeDOC()">close DOC</button>
+
+     <button onclick="closeDOC()">close DOC</button>
   <button onclick="waitFiveSec()">back history</button>
    <button onclick="waitFiveSec()">back history</button> -->
 
@@ -58,12 +58,14 @@ function callPostMessage() {
 }
   
 function closeInAppBrowser() {
-  window.ReactNativeWebView.postMessage('closeBrowser');
+  // window.ReactNativeWebView.postMessage('closeBrowser');
+  window.opener.postMessage('closeBrowser');
 }
 function closeWin() {
   window.close();
 }
 
+  
 // function waitFiveSec() {
 //   window.history.back();
 // }
