@@ -1,90 +1,21 @@
-<!-- <!DOCTYPE html>
-<html>
-<body>
-
-<h1>The Window Object 3</h1>
-<h2>The open() and close() Methods</h2>
-
-<button onclick="closeParent()">close parent</button>
-<button onclick="closeWin()">Close</button>
-
-<script>
 
 
-function closeWin() {
-  window.close();
-  // setTimeout(window.close, 3000);
-}
-function closeParent() {
-  window.parent.close();
-}
-</script>
 
-</body>
-</html>
- -->
  <!DOCTYPE html>
 <html>
 <body>
-
-<h1>The Window Objec 1</h1>
+<h1>The Window Objec 3</h1>
 <h2>The open() and close() Methods</h2>
   <p>If the page stops. Please press the button below to continue.</p>
 
-<!-- <button onclick="openWin()">Open "myWindow"</button> -->
-  <a href="hyperzod://closeinappbrowser/?payloadUri=https://www.arything.com">Open iOS App</a>
-
-<button onclick="closeWin()">Close "myWindow"</button>
-  <button onclick="closeInAppBrowser()">Close In-App Browser</button>
-  <button onclick="callPostMessage()">Call postMessage</button>
-<!--   <button onclick="closeSelf()">close self</button>
-
-     <button onclick="closeDOC()">close DOC</button>
-  <button onclick="waitFiveSec()">back history</button>
-   <button onclick="waitFiveSec()">back history</button> -->
-
-<script>
-let myWindow;
-
-// function openWin() {
-//   myWindow = window.open("", "", "width=200,height=100");
-// }
-function callPostMessage() {
-  console.log("callPostMessage")
-  let data = {
-        postMessageType: "listenEvenFromExternalBrowser"
-      };
-      window.ReactNativeWebView.postMessage(JSON.stringify(data));
-}
   
-function closeInAppBrowser() {
-  // window.ReactNativeWebView.postMessage('closeBrowser');
-  window.opener.postMessage('closeBrowser');
-}
-function closeWin() {
+  <a href="hyperzod://closeinappbrowser/com.onlinekakacustomer">Open iOS App</a>
+   
+  <button onclick="closeWin()">Close "myWindow"</button>
+
+  function closeWin() {
   window.close();
+  // setTimeout(window.close, 3000);
 }
-
-  
-// function waitFiveSec() {
-//   window.history.back();
-// }
-
-// function closeSelf() {
-//   window.self.close();
-// }
-
-// function closeJs() {
-//   Javascript:window.close();
-// }
-
-// function closeDOC() {
-//   javascript:document.onclick = function() {
-//     window.close();
-//   };
-// }
-</script>
-
-
 </body>
 </html>
