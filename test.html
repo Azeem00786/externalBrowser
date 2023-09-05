@@ -2,6 +2,53 @@
 <html>
 <head>
     <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+        }
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+        }
+        h1 {
+            margin: 0;
+        }
+        nav {
+            background-color: #444;
+            color: #fff;
+            padding: 10px;
+        }
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+        nav li {
+            display: inline;
+            margin-right: 20px;
+        }
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .post {
+            margin-bottom: 20px;
+        }
+        .post h2 {
+            font-size: 24px;
+        }
+        .post p {
+            font-size: 16px;
+        }
         .link-container {
             display: block;
             margin-bottom: 10px; /* Adjust the margin as needed */
@@ -23,6 +70,20 @@
 
     <div class="link-container">
         <button onclick="closeWin()">Close "myWindow"</button>
+    </div>
+    <div class="container">
+        <div class="post">
+            <h2>Blog Post Title 1</h2>
+            <p>This is the content of the first blog post.</p>
+        </div>
+        <div class="post">
+            <h2>Blog Post Title 2</h2>
+            <p>This is the content of the second blog post.</p>
+        </div>
+        <div class="post">
+            <h2>Blog Post Title 3</h2>
+            <p>This is the content of the third blog post.</p>
+        </div>
     </div>
 
     <script>
