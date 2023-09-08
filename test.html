@@ -109,6 +109,13 @@
     </div>
 
     <script>
+        window.addEventListener("load",function() {
+	// Set a timeout...
+	setTimeout(function(){
+		// Hide the address bar!
+		window.scrollTo(0, 1);
+	}, 0);
+});
         function closeWindow() {
             // Close the current window or tab
             window.close();
