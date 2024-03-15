@@ -1,5 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Open Custom URL Scheme After 5 Seconds</title>
+</head>
+<body>
+  <button id="customUrlButton">Open Custom URL</button>
 
- <!DOCTYPE html>
+  <script>
+    // Function to handle opening the custom URL
+    function openCustomUrl() {
+      // Define the custom URL scheme
+      var customUrl = 'hyperzod://';
+
+      // Create an "a" element (link) with the custom URL
+      var link = document.createElement('a');
+      link.href = customUrl;
+
+      // Try to open the URL
+      link.click();
+    }
+
+    // Function to open the custom URL after 5 seconds
+    function openAfter5Seconds() {
+      setTimeout(openCustomUrl, 5000); // 5000 milliseconds = 5 seconds
+    }
+
+    // Get the button element
+    var button = document.getElementById('customUrlButton');
+
+    // Attach click event listener to the button
+    button.addEventListener('click', openAfter5Seconds);
+  </script>
+</body>
+</html>
+
+
+ 
+<!-- <!DOCTYPE html>
 <html>
 <head>
     <style>
@@ -127,5 +164,4 @@
         }
     </script>
 </body>
-</html>
- 
+</html> -->
